@@ -1,0 +1,462 @@
+// font-family: 'Poppins', sans-serif;
+//font-family: 'Alice', serif;
+
+$imyygray: #3b4447;
+$imyyyellow: #ffd700;
+$imyywhite: #f3e9b6;
+$imyyoker: #a09424;
+$imyyorange: #f87003;
+
+html body {
+  width: 100%;
+  background-color: rgb(240, 178, 76);
+  color: #242a2c;
+}
+
+#body-home {
+  background-image: url(../resources/img/HomeLores.jpg);
+}
+
+#body-cursus {
+  background-image: url(../resources/img/CursusLores.jpg);
+}
+
+#body-consult {
+  background-image: url(../resources/img/ConsultLores.jpg);
+}
+
+#body-cadeau {
+  background-image: url(../resources/img/CadeauLores.jpg);
+}
+
+#body-dagboek {
+  background-image: url(../resources/img/DagboekLores.jpg);
+}
+
+#body-contact {
+  background-image: url(../resources/img/ContactLores.jpg);
+}
+
+.nav {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $imyygray;
+
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tarot-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 250px;
+  // background-color: rgb(254, 231, 200);
+  background-image: linear-gradient(
+    rgb(240, 210, 171),
+    rgb(232, 204, 163),
+    rgb(207, 184, 152)
+  );
+  border: 1px solid $imyygray;
+  border-radius: 5px;
+}
+
+img {
+  width: 130px;
+  height: auto;
+}
+
+#tarot-home {
+  z-index: 2;
+  position: fixed;
+  top: 260px;
+  right: 20px;
+  transform: rotate3d(0, 0, 1, -20deg);
+  box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-home:hover {
+  // transform: rotate3d(0, 0, 1, -19deg);
+  box-shadow: 3px 4px 5px 0px rgba(29, 6, 2, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-cursus {
+  position: fixed;
+  top: 80px;
+  right: 200px;
+  transform: rotate3d(0, 0, 1, -10deg);
+  box-shadow: 5px 5px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-cursus:hover {
+  box-shadow: 3px 2px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-consult {
+  position: fixed;
+  top: 400px;
+  right: 150px;
+  transform: rotate3d(0, 0, 1, 6deg);
+  box-shadow: 5px 7px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-consult:hover {
+  top: 400px;
+  box-shadow: 3px 4px 7px 0px rgba(36, 7, 2, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-cadeau {
+  position: fixed;
+  top: 480px;
+  right: 20px;
+  transform: rotate3d(0, 0, 1, 20deg);
+  box-shadow: 5px 2px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-cadeau:hover {
+  top: 480px;
+  transform: rotate3d(0, 0, 1, 19.5deg);
+  box-shadow: 4px 3px 7px 0px rgba(36, 7, 2, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-dagboek {
+  z-index: 4;
+  position: fixed;
+  top: 40px;
+  right: -40px;
+  transform: rotate3d(0, 0, 1, 12deg);
+  box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-dagboek:hover {
+  transform: rotate3d(0, 0, 1, 12deg);
+  box-shadow: 5px 5px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-contact {
+  z-index: 3;
+  position: fixed;
+  top: 110px;
+  right: 65px;
+  transform: rotate3d(0, 0, 1, 0deg);
+  box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+#tarot-contact:hover {
+  box-shadow: 7px 6px 9px 0px rgba(41, 8, 2, 0.5);
+  transition: all 300ms ease-in-out;
+}
+
+//
+//
+#main-home {
+  // border: 3px solid pink;
+  max-width: 800px;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(19, 50px);
+  transition: all 300ms ease-in-out;
+}
+
+#main_opac {
+  grid-column: 2 / span3;
+  grid-row: 4 / 14;
+  // border: 3px solid red;
+  max-width: 500px;
+  max-height: 600px;
+  background-color: rgb(211, 221, 220);
+  opacity: 0.4;
+  border: 1px solid $imyygray;
+  border-radius: 5px;
+}
+
+h1 {
+  // border: 3px solid blue;
+  grid-column: 1 / span4;
+  grid-row: 1 / 1;
+  padding: 0px;
+  max-width: 700px;
+  margin-left: 100px;
+  margin-top: 40px;
+  color: $imyygray;
+  text-align: center;
+  // font-family: 'Poppins', sans-serif;
+  font-family: "Alice", serif;
+  font-size: 2.6rem;
+  z-index: 2;
+}
+
+#hoi_header {
+  grid-column: 3 / span3;
+  grid-row: 4 / 5;
+  color: $imyygray;
+  z-index: 2;
+}
+
+#hoi_par {
+  grid-column: 2 / span3;
+  grid-row: 5 / 14;
+  max-width: 400px;
+  padding: 10px 10px 10px 40px;
+  z-index: 2;
+  color: $imyygray;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.par-link {
+  text-decoration: none;
+  color: #ff5201;
+}
+
+#mooie_opac {
+  grid-column: 2 / span3;
+  grid-row: 15 / 18;
+  // border: 3px solid red;
+  max-width: 500px;
+  max-height: 600px;
+  background-color: rgb(211, 221, 220);
+  opacity: 0.4;
+  border: 1px solid $imyygray;
+  border-radius: 5px;
+}
+
+#mooie_header {
+  grid-column: 3 / span3;
+  grid-row: 15 / 15;
+  color: $imyygray;
+  z-index: 2;
+}
+
+#mooie_par {
+  grid-column: 2 / span3;
+  grid-row: 16 / 18;
+  max-width: 400px;
+  padding: 10px 10px 10px 40px;
+  z-index: 2;
+  color: $imyygray;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+#social-nav {
+  // border: 3px solid red;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
+
+.social {
+  background: transparent;
+}
+
+.social_img {
+  width: 35px;
+  margin: 10px;
+  color: #f87003;
+}
+
+@media only screen and (max-width: 800px) {
+  #main-home {
+    // border: 3px solid pink;
+    max-width: 400px;
+    // max-height: 120%;
+    display: grid;
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(20, 50px);
+    transition: all 300ms ease-in-out;
+  }
+
+  #main_opac {
+    grid-column: 2 / span3;
+    grid-row: 4 / 15;
+    // border: 3px solid red;
+    max-width: 500px;
+    max-height: 600px;
+    background-color: rgb(211, 221, 220);
+    opacity: 0.4;
+    border: 1px solid $imyygray;
+    border-radius: 5px;
+  }
+
+  h1 {
+    // border: 3px solid blue;
+    grid-column: 1 / span4;
+    grid-row: 1 / 1;
+    padding: 0px;
+    max-width: 700px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: $imyygray;
+    text-align: center;
+    // font-family: 'Poppins', sans-serif;
+    font-family: "Alice", serif;
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  #hoi_header {
+    grid-column: 3 / span3;
+    grid-row: 4 / 5;
+    color: $imyygray;
+    z-index: 2;
+    padding: 10px;
+  }
+
+  #hoi_par {
+    grid-column: 2 / span3;
+    grid-row: 5 / 14;
+    max-width: 400px;
+    padding: 10px 10px 10px 40px;
+    z-index: 2;
+    color: $imyygray;
+  }
+
+  .par-link {
+    text-decoration: none;
+    color: #ff5201;
+  }
+
+  #mooie_opac {
+    grid-column: 2 / span3;
+    grid-row: 16 / 19;
+    // border: 3px solid red;
+    max-width: 500px;
+    max-height: 600px;
+    background-color: rgb(211, 221, 220);
+    opacity: 0.4;
+    border: 1px solid $imyygray;
+    border-radius: 5px;
+  }
+
+  #mooie_header {
+    grid-column: 3 / span3;
+    grid-row: 16 / 16;
+    color: $imyygray;
+    z-index: 2;
+    padding: 10px 10px;
+  }
+
+  #mooie_par {
+    grid-column: 2 / span3;
+    grid-row: 17 / 18;
+    max-width: 400px;
+    padding: 0px 10px 10px 40px;
+    z-index: 2;
+    color: $imyygray;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+
+  #tarot-home {
+    z-index: 2;
+    position: fixed;
+    top: 280px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-home:hover {
+    // transform: rotate3d(0, 0, 1, -19deg);
+    box-shadow: 3px 4px 5px 0px rgba(29, 6, 2, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-cursus {
+    z-index: 2;
+    position: fixed;
+    top: 50px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 5px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-cursus:hover {
+    box-shadow: 3px 2px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-consult {
+    position: fixed;
+    top: 400px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 7px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-consult:hover {
+    box-shadow: 3px 4px 7px 0px rgba(36, 7, 2, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-cadeau {
+    position: fixed;
+    top: 540px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 2px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-cadeau:hover {
+    top: 540px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 4px 3px 7px 0px rgba(36, 7, 2, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-dagboek {
+    z-index: 1;
+    position: fixed;
+    top: -50px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-dagboek:hover {
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 5px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-contact {
+    z-index: 3;
+    position: fixed;
+    top: 170px;
+    right: -140px;
+    transform: rotate3d(0, 0, 1, 90deg);
+    box-shadow: 5px 10px 7px 0px rgba(62, 12, 3, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  #tarot-contact:hover {
+    box-shadow: 7px 6px 9px 0px rgba(41, 8, 2, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+}
